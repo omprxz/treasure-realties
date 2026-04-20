@@ -86,13 +86,11 @@ $(document).ready(function () {
     var answer = item.find('.faq-answer');
     var isOpen = item.hasClass('open');
 
-    // Close all
     $('.faq-item.open').each(function () {
       $(this).removeClass('open');
       $(this).find('.faq-answer').css('max-height', '');
     });
 
-    // Open clicked (unless it was already open)
     if (!isOpen) {
       item.addClass('open');
       answer.css('max-height', answer[0].scrollHeight + 'px');
@@ -106,7 +104,6 @@ $(document).ready(function () {
       var target = parseInt($el.data('target'), 10);
       var suffix = $el.data('suffix') || '';
       var duration = 1800;
-      var start = 0;
       var startTime = null;
 
       function step(timestamp) {
@@ -120,7 +117,6 @@ $(document).ready(function () {
     });
   }
 
-  /* Run counters when stats section enters viewport */
   var countersRun = false;
   if ($('.stats-section').length) {
     $(window).on('scroll.stats', function () {
@@ -134,15 +130,15 @@ $(document).ready(function () {
     });
   }
 
-  /* ── Contact form submission (static) ── */
+  /* ── Contact page form submission ── */
   $('#contactForm').on('submit', function (e) {
     e.preventDefault();
     var btn = $(this).find('.form-btn');
-    var origText = btn.text();
-    btn.text('Sending…').prop('disabled', true);
+    var origHTML = btn.html();
+    btn.html('Sending… <i class="fa fa-spinner fa-spin" style="margin-left:8px;"></i>').prop('disabled', true);
     setTimeout(function () {
-      btn.text('Message Sent!');
-      setTimeout(function () { btn.text(origText).prop('disabled', false); }, 3000);
+      btn.html('Message Sent! <i class="fa fa-check" style="margin-left:8px;"></i>');
+      setTimeout(function () { btn.html(origHTML).prop('disabled', false); }, 3000);
     }, 1200);
   });
 
@@ -150,6 +146,82 @@ $(document).ready(function () {
   if ($('.marquee-track').length) {
     var $track = $('.marquee-track');
     $track.html($track.html() + $track.html());
+  }
+
+  /* ── MODAL: Open / Close ── */
+  function openModal() {
+    $('#contactModal').fadeIn(200);
+    $('body').css('overflow', 'hidden');
+  }
+
+  function closeModal() {
+    $('#contactModal').fadeOut(200);
+    $('body').css('overflow', '');
+  }
+
+  /* All modal triggers: nav CTA, email float, services/about enquiry CTAs, mobile hero CTA */
+  $(document).on('click', '#navGetInTouch, #emailFloatBtn, .open-modal-btn', function (e) {
+    e.preventDefault();
+    openModal();
+  });
+
+  /* Close: X button */
+  $(document).on('click', '#modalClose', function () {
+    closeModal();
+  });
+
+  /* Close: click outside modal box */
+  $(document).on('click', '#contactModal', function (e) {
+    if ($(e.target).is('#contactModal')) {
+      closeModal();
+    }
+  });
+
+  /* Close: ESC key */
+  $(document).on('keydown', function (e) {
+    if (e.key === 'Escape') closeModal();
+  });
+
+  /* Modal form submit */
+  $(document).on('submit', '#modalContactForm', function (e) {
+    e.preventDefault();
+    var btn = $(this).find('button[type="submit"]');
+    var origHTML = btn.html();
+    btn.html('Sending… <i class="fa fa-spinner fa-spin" style="margin-left:8px;"></i>').prop('disabled', true);
+    setTimeout(function () {
+      btn.html('Enquiry Sent! <i class="fa fa-check" style="margin-left:8px;"></i>');
+      setTimeout(function () {
+        btn.html(origHTML).prop('disabled', false);
+        closeModal();
+        $('#modalContactForm')[0].reset();
+      }, 2500);
+    }, 1200);
+  });
+
+  /* ── Hero Slide Enquiry Forms (all 3 slides share same handler) ── */
+  $(document).on('submit', '.slide-enquiry-form', function (e) {
+    e.preventDefault();
+    var $form = $(this);
+    var btn = $form.find('.hero-form-btn');
+    var origHTML = btn.html();
+    btn.html('Sending… <i class="fa fa-spinner fa-spin" style="margin-left:8px;"></i>').prop('disabled', true);
+    setTimeout(function () {
+      btn.html('Thank You! We\'ll Call You Back <i class="fa fa-check" style="margin-left:8px;"></i>');
+      setTimeout(function () {
+        btn.html(origHTML).prop('disabled', false);
+        $form[0].reset();
+      }, 3000);
+    }, 1200);
+  });
+
+  /* ── Smooth scroll to hash section (footer service deep links) ── */
+  if (window.location.hash) {
+    var $target = $(window.location.hash);
+    if ($target.length) {
+      setTimeout(function () {
+        $('html, body').animate({ scrollTop: $target.offset().top - 90 }, 600);
+      }, 300);
+    }
   }
 
 });

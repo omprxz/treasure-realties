@@ -5,25 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact Us — Treasure Realties</title>
   <meta name="description" content="Get in touch with Treasure Realties — real estate experts along the Yamuna Expressway. Call, WhatsApp, or fill our contact form." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-  <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
 
   <!-- ===== HEADER ===== -->
   <header id="header">
     <div class="header-inner">
-      <a href="index.html" class="logo">
-        <span class="logo-main">Treasure Realties</span>
-        <span class="logo-sub">Yamuna Expressway</span>
+      <a href="index.html" class="logo logo-img-wrap">
+        <img src="assets/Treasure Realties Logo.png" alt="Treasure Realties" class="header-logo-img" />
       </a>
       <nav class="nav-links">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="services.html">Services</a>
         <a href="contact.html" class="active">Contact</a>
-        <a href="contact.html" class="nav-cta">Get in Touch</a>
+        <a href="#" class="nav-cta" id="navGetInTouch">Get in Touch</a>
       </nav>
       <button class="hamburger" aria-label="Toggle menu">
         <span></span><span></span><span></span>
@@ -73,7 +74,7 @@
             <div class="contact-info-icon"><i class="fa fa-phone"></i></div>
             <div>
               <h4>Phone &amp; WhatsApp</h4>
-              <p><a href="tel:+919876543210" style="color:var(--text-muted);transition:color 0.3s;" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--text-muted)'">+91 98765 43210</a></p>
+              <p><a href="tel:+919811515598" style="color:var(--text-muted);transition:color 0.3s;" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--text-muted)'">+91 98115 15598</a></p>
               <p style="font-size:12px;color:var(--text-muted);margin-top:4px;">Mon – Sat, 9:00 AM – 7:00 PM</p>
             </div>
           </div>
@@ -81,7 +82,7 @@
             <div class="contact-info-icon"><i class="fa fa-envelope"></i></div>
             <div>
               <h4>Email</h4>
-              <p><a href="mailto:info@treasurerealties.in" style="color:var(--text-muted);transition:color 0.3s;" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--text-muted)'">info@treasurerealties.in</a></p>
+              <p><a href="mailto:treasurerealties@gmail.com" style="color:var(--text-muted);transition:color 0.3s;" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--text-muted)'">treasurerealties@gmail.com</a></p>
             </div>
           </div>
 
@@ -89,10 +90,10 @@
           <div style="margin-top:40px;">
             <p style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:16px;">Quick Connect</p>
             <div style="display:flex;flex-wrap:wrap;gap:12px;">
-              <a href="https://wa.me/919876543210" target="_blank" rel="noopener" class="btn-gold" style="display:flex;align-items:center;gap:10px;padding:12px 24px;font-size:13px;background:#25D366;border-color:#25D366;color:#fff;">
+              <a href="https://wa.me/919811515598" target="_blank" rel="noopener" class="btn-gold" style="display:flex;align-items:center;gap:10px;padding:12px 24px;font-size:13px;background:#25D366;border-color:#25D366;color:#fff;">
                 <i class="fab fa-whatsapp"></i> WhatsApp
               </a>
-              <a href="tel:+919876543210" class="btn-outline" style="display:flex;align-items:center;gap:10px;padding:12px 24px;font-size:13px;">
+              <a href="tel:+919811515598" class="btn-outline" style="display:flex;align-items:center;gap:10px;padding:12px 24px;font-size:13px;">
                 <i class="fa fa-phone"></i> Call Now
               </a>
             </div>
@@ -122,7 +123,7 @@
         <div class="contact-form-card">
           <p class="section-label">Send a Message</p>
           <div class="gold-line"></div>
-          <h3 style="font-family:'Playfair Display',serif;font-size:26px;color:var(--brown);margin-bottom:8px;">We'd Love to Hear From You</h3>
+          <h3 style="font-size:26px;color:var(--brown);margin-bottom:8px;">We'd Love to Hear From You</h3>
           <p style="font-size:14px;color:var(--text-muted);margin-bottom:32px;">Fill in the form and one of our advisors will get back to you within 24 hours.</p>
 
           <form id="contactForm" novalidate>
@@ -140,7 +141,7 @@
             </div>
             <div class="form-group">
               <label for="service">Service Interested In</label>
-              <select id="service" name="service" style="width:100%;padding:14px 16px;border:1px solid var(--border);background:var(--bg);font-family:'Poppins',sans-serif;font-size:14px;color:var(--text);outline:none;transition:border-color 0.3s;appearance:none;cursor:pointer;">
+              <select id="service" name="service" style="width:100%;padding:14px 16px;border:1px solid var(--border);background:var(--bg);font-family:'DM Sans',sans-serif;font-size:14px;color:var(--text);outline:none;transition:border-color 0.3s;appearance:none;cursor:pointer;">
                 <option value="">Select a service…</option>
                 <option value="buying">Property Buying</option>
                 <option value="rental">Rental Services</option>
@@ -175,18 +176,27 @@
         <h2 class="section-title">Visit Our Office</h2>
         <p style="color:var(--text-muted);margin-top:12px;font-size:14px;">We welcome walk-ins during office hours. Our team is always ready to sit down with you.</p>
       </div>
-      <div class="map-container">
-        <div class="map-header">
-          <i class="fa fa-location-dot"></i>
-          <div>
-            <h3>Treasure Realties Office</h3>
-            <p>Sector 22C, Yamuna Expressway, Greater Noida, Uttar Pradesh — 201308</p>
-          </div>
+      <!-- Premium Map Block -->
+      <div class="map-premium-block">
+        <div class="map-info-sidebar">
+          <div class="map-info-icon-wrap"><i class="fa fa-location-dot"></i></div>
+          <h3>Treasure Realties Office</h3>
+          <p>Lord Krishna Mart, Yamuna Expressway<br>Greater Noida, Uttar Pradesh</p>
+          <div class="map-info-divider"></div>
+          <div class="map-info-row"><i class="fa fa-phone"></i><span><a href="tel:+919811515598">+91 98115 15598</a></span></div>
+          <div class="map-info-row"><i class="fa fa-envelope"></i><span><a href="mailto:treasurerealties@gmail.com">treasurerealties@gmail.com</a></span></div>
+          <div class="map-info-row"><i class="fa fa-clock"></i><span>Mon–Sat, 9 AM – 7 PM</span></div>
+          <a href="https://maps.google.com/?q=Lord+Krishna+Mart+Yamuna+Expressway" target="_blank" rel="noopener" class="btn-gold" style="margin-top:24px;display:inline-flex;align-items:center;gap:8px;font-size:13px;padding:12px 20px;">
+            <i class="fa fa-diamond-turn-right"></i> Get Directions
+          </a>
         </div>
-        <div class="map-embed-placeholder">
-          <i class="fa fa-map-location-dot"></i>
-          <p>Google Map — Yamuna Expressway, Greater Noida</p>
-          <p style="font-size:12px;margin-top:4px;color:rgba(0,0,0,0.4);">Replace this with an embedded Google Maps iframe for your office location</p>
+        <div class="map-iframe-wrap">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3512.8719546045995!2d77.55726141117678!3d28.302202698903674!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cc735fef217e7%3A0x22e0874603fc4052!2sLord%20Krishna%20Mart!5e0!3m2!1sen!2sin!4v1776680420680!5m2!1sen!2sin"
+            width="100%" height="100%" style="border:0;display:block;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Treasure Realties Office Location">
+          </iframe>
         </div>
       </div>
     </div>
@@ -197,9 +207,8 @@
     <div class="container">
       <div class="footer-main">
         <div class="footer-logo">
-          <div class="logo">
-            <span class="logo-main">Treasure Realties</span>
-            <span class="logo-sub">Yamuna Expressway</span>
+          <div class="logo logo-img-wrap">
+            <img src="assets/Treasure Realties Logo.png" alt="Treasure Realties" class="footer-logo-img" />
           </div>
           <p>Your trusted real estate partner for premium properties along the Yamuna Expressway corridor. Integrity, expertise, and personalised service — always.</p>
         </div>
@@ -215,21 +224,21 @@
         <div class="footer-col">
           <h4>Our Services</h4>
           <ul>
-            <li><a href="services.html">Property Buying</a></li>
-            <li><a href="services.html">Rental Services</a></li>
-            <li><a href="services.html">Interior Design</a></li>
+            <li><a href="services.html#property-buying">Property Buying</a></li>
+            <li><a href="services.html#rental-services">Rental Services</a></li>
+            <li><a href="services.html#interior-design">Interior Design</a></li>
             <li><a href="contact.html">Consultation</a></li>
           </ul>
         </div>
         <div class="footer-col">
           <h4>Contact Us</h4>
-          <div class="footer-contact-item"><i class="fa fa-location-dot"></i><span>Sector 22C, Yamuna Expressway, Greater Noida, UP 201308</span></div>
-          <div class="footer-contact-item"><i class="fa fa-phone"></i><span>+91 98765 43210</span></div>
-          <div class="footer-contact-item"><i class="fa fa-envelope"></i><span>info@treasurerealties.in</span></div>
+          <div class="footer-contact-item"><i class="fa fa-location-dot"></i><span>Lord Krishna Mart, Yamuna Expressway, Greater Noida, UP</span></div>
+          <div class="footer-contact-item"><i class="fa fa-phone"></i><span><a href="tel:+919811515598" style="color:inherit;">+91 98115 15598</a></span></div>
+          <div class="footer-contact-item"><i class="fa fa-envelope"></i><span><a href="mailto:treasurerealties@gmail.com" style="color:inherit;">treasurerealties@gmail.com</a></span></div>
         </div>
       </div>
       <div class="footer-bottom">
-        <span>&copy; 2025 Treasure Realties. All rights reserved.</span>
+        <span>&copy; 2026 Treasure Realties. All rights reserved.</span>
         <span>Designed with care for Bhagat Singh &amp; Team</span>
       </div>
     </div>
@@ -237,9 +246,46 @@
 
   <!-- ===== FLOATING BUTTONS ===== -->
   <div class="floating-btns">
-    <a href="https://wa.me/919876543210" class="float-btn whatsapp" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i><span class="tooltip">WhatsApp Us</span></a>
-    <a href="tel:+919876543210" class="float-btn call" aria-label="Call"><i class="fa fa-phone"></i><span class="tooltip">Call Us</span></a>
-    <a href="mailto:info@treasurerealties.in" class="float-btn email" aria-label="Email"><i class="fa fa-envelope"></i><span class="tooltip">Email Us</span></a>
+    <a href="https://wa.me/919811515598" class="float-btn whatsapp float-btn-animated" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i><span class="tooltip">WhatsApp Us</span></a>
+    <a href="tel:+919811515598" class="float-btn call float-btn-animated" aria-label="Call"><i class="fa fa-phone"></i><span class="tooltip">Call Us</span></a>
+    <button class="float-btn email float-btn-animated" id="emailFloatBtn" aria-label="Email us" style="border:none;cursor:pointer;"><i class="fa fa-envelope"></i><span class="tooltip">Email Us</span></button>
+  </div>
+
+  <!-- ===== GET IN TOUCH MODAL ===== -->
+  <div id="contactModal" class="modal-overlay" style="display:none;" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-box">
+      <button class="modal-close" id="modalClose" aria-label="Close">&times;</button>
+      <p class="section-label">Quick Enquiry</p>
+      <div class="gold-line"></div>
+      <h3 id="modalTitle">Get in Touch</h3>
+      <p style="font-size:13px;color:var(--text-muted);margin-bottom:24px;">Fill in your details and our advisor will call you back shortly.</p>
+      <form id="modalContactForm" novalidate>
+        <div class="form-group">
+          <label for="modalName">Full Name *</label>
+          <input type="text" id="modalName" name="name" placeholder="e.g. Rahul Sharma" required />
+        </div>
+        <div class="form-group">
+          <label for="modalPhone">Phone Number *</label>
+          <input type="tel" id="modalPhone" name="phone" placeholder="e.g. +91 98765 43210" required />
+        </div>
+        <div class="form-group">
+          <label for="modalService">Service Interested In</label>
+          <select id="modalService" name="service" style="width:100%;padding:14px 16px;border:1px solid var(--border);background:var(--bg);font-family:'DM Sans',sans-serif;font-size:14px;color:var(--text);outline:none;transition:border-color 0.3s;appearance:none;cursor:pointer;">
+            <option value="">Select a service…</option>
+            <option value="buying">Property Buying</option>
+            <option value="rental">Rental Services</option>
+            <option value="interior">Interior Design</option>
+            <option value="advisory">Investment Advisory</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        <button type="submit" class="btn-gold form-btn" style="margin-top:8px;">Send Enquiry <i class="fa fa-arrow-right" style="margin-left:8px;"></i></button>
+      </form>
+      <p style="font-size:11px;color:var(--text-muted);margin-top:16px;text-align:center;">
+        <i class="fa fa-lock" style="color:var(--gold);margin-right:4px;"></i>
+        Your information is kept strictly confidential.
+      </p>
+    </div>
   </div>
 
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
