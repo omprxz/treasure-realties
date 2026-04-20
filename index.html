@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treasure Realties | Building Trust, Creating Value</title>
+    <meta name="description" content="Treasure Realties helps you buy, sell, and invest in quality real estate across Yamuna Expressway and Greater Noida with transparent guidance.">
+    <meta name="keywords" content="Treasure Realties, real estate, Yamuna Expressway, Greater Noida, property consultant, home buying, property investment">
+    <meta name="author" content="Treasure Realties">
+    <meta property="og:title" content="Treasure Realties | Building Trust, Creating Value">
+    <meta property="og:description" content="Premium real estate advisory for homes, plots, and investment opportunities.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://i.ibb.co/Y7Fvnq3J/Treasure-Realties-Logo-1.png">
+    <meta name="theme-color" content="#C3933E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f9f5ee',
+                            100: '#f2e7d2',
+                            300: '#d8b882',
+                            500: '#c3933e',
+                            700: '#5b3922',
+                            900: '#2c1909'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Cormorant Garamond', 'serif']
+                    }
+                }
+            }
+        };
+    </script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-[#fffdf9] text-brand-900 antialiased">
+    <div class="floating-contact">
+        <a href="tel:+919811515598" class="contact-pill" aria-label="Call Treasure Realties">
+            <i class="fa-solid fa-phone"></i>
+            <span>Call</span>
+        </a>
+        <a href="https://wa.me/919811515598" target="_blank" rel="noopener" class="contact-pill" aria-label="WhatsApp Treasure Realties">
+            <i class="fa-brands fa-whatsapp"></i>
+            <span>WhatsApp</span>
+        </a>
+        <a href="mailto:treasurerealties@gmail.com" class="contact-pill" aria-label="Email Treasure Realties">
+            <i class="fa-solid fa-envelope"></i>
+            <span>Email</span>
+        </a>
+    </div>
+
+    <header class="sticky top-0 z-40 border-b border-brand-100/70 bg-white/90 backdrop-blur">
+        <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
+            <a href="#home" class="flex items-center gap-3">
+                <img src="assets/logo.png" alt="Treasure Realties Logo" class="h-11 w-11 rounded-full border border-brand-100 object-cover">
+                <div>
+                    <p class="font-display text-2xl leading-none text-brand-900">Treasure Realties</p>
+                    <p class="text-xs font-medium tracking-wide text-brand-700">Building Trust, Creating Value</p>
+                </div>
+            </a>
+
+            <button id="menuBtn" class="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-brand-200 text-brand-900 md:hidden" aria-label="Toggle menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <nav id="mainNav" class="hidden gap-6 text-sm font-semibold text-brand-800 md:flex">
+                <a href="index.html" class="hover:text-brand-500">Home</a>
+                <a href="about.html" class="hover:text-brand-500">About</a>
+                <a href="index.html#services" class="hover:text-brand-500">Services</a>
+                <a href="index.html#blogs" class="hover:text-brand-500">Blogs</a>
+                <a href="index.html#testimonials" class="hover:text-brand-500">Testimonials</a>
+                <a href="contact.html" class="hover:text-brand-500">Contact</a>
+            </nav>
+        </div>
+
+        <nav id="mobileNav" class="hidden border-t border-brand-100 bg-white px-4 py-4 md:hidden">
+            <div class="flex flex-col gap-3 text-sm font-semibold text-brand-800">
+                <a href="index.html" class="mobile-link">Home</a>
+                <a href="about.html" class="mobile-link">About</a>
+                <a href="index.html#services" class="mobile-link">Services</a>
+                <a href="index.html#blogs" class="mobile-link">Blogs</a>
+                <a href="index.html#testimonials" class="mobile-link">Testimonials</a>
+                <a href="contact.html" class="mobile-link">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="relative overflow-hidden">
+            <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(195,147,62,0.2),_transparent_40%)]"></div>
+            <div class="mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:px-6 md:py-20 lg:grid-cols-2 lg:items-center lg:px-8">
+                <div class="space-y-6">
+                    <span class="inline-flex items-center rounded-full border border-brand-200 bg-brand-50 px-4 py-1 text-xs font-semibold uppercase tracking-wider text-brand-700">Premium Real Estate Advisory</span>
+                    <h1 class="font-display text-4xl leading-tight text-brand-900 sm:text-5xl lg:text-6xl">Your Trusted Property Partner in Yamuna Expressway</h1>
+                    <p class="max-w-xl text-base text-brand-700 sm:text-lg">From first-home decisions to long-term investment strategy, Treasure Realties provides transparent advice, curated opportunities, and end-to-end support.</p>
+                    <div class="flex flex-wrap items-center gap-4">
+                        <a href="#contact" class="rounded-xl bg-brand-500 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-brand-500/25 transition hover:-translate-y-0.5 hover:bg-brand-700">Book Free Consultation</a>
+                        <a href="#blogs" class="rounded-xl border border-brand-300 px-6 py-3 text-sm font-semibold text-brand-800 transition hover:bg-brand-50">Explore Insights</a>
+                    </div>
+                    <div class="grid grid-cols-3 gap-3 pt-4 sm:max-w-md">
+                        <div class="premium-card p-3 text-center">
+                            <p class="text-xl font-bold text-brand-900">500+</p>
+                            <p class="text-xs text-brand-700">Properties Guided</p>
+                        </div>
+                        <div class="premium-card p-3 text-center">
+                            <p class="text-xl font-bold text-brand-900">98%</p>
+                            <p class="text-xs text-brand-700">Client Satisfaction</p>
+                        </div>
+                        <div class="premium-card p-3 text-center">
+                            <p class="text-xl font-bold text-brand-900">8+ Yrs</p>
+                            <p class="text-xs text-brand-700">Market Experience</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative">
+                    <div class="hero-shell premium-card overflow-hidden p-2">
+                        <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1400&q=80" alt="Modern premium apartments" class="h-[440px] w-full rounded-2xl object-cover sm:h-[520px]">
+                    </div>
+                    <div class="absolute -left-5 bottom-6 hidden rounded-2xl bg-white/90 p-4 shadow-xl backdrop-blur sm:block">
+                        <p class="text-xs font-semibold uppercase tracking-wider text-brand-700">Focus Area</p>
+                        <p class="text-sm font-semibold text-brand-900">Yamuna Expressway & Greater Noida</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+            <div class="grid gap-8 lg:grid-cols-[1.1fr,1fr] lg:items-center">
+                <div class="space-y-4">
+                    <p class="section-kicker">About Treasure Realties</p>
+                    <h2 class="font-display text-3xl text-brand-900 sm:text-4xl">Personalized Guidance. Practical Results.</h2>
+                    <p class="text-brand-700">Treasure Realties is built on trust, local market understanding, and value-first advisory. We help families and investors make smarter decisions through verified opportunities, legal awareness, and location intelligence.</p>
+                    <p class="text-brand-700">Our recommendations are backed by market fundamentals, neighborhood growth indicators, and transparent communication at every step.</p>
+                    <div class="mt-6">
+                        <a href="about.html" class="inline-flex items-center gap-2 rounded-xl bg-brand-50 px-5 py-2.5 text-sm font-semibold text-brand-800 transition hover:bg-brand-100">
+                            Read Our Story <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="premium-card p-6">
+                    <h3 class="text-xl font-semibold text-brand-900">Office Address</h3>
+                    <p class="mt-3 leading-relaxed text-brand-700">LKM SHOP NO SF-10<br>Gaur Yamuna City<br>Yamuna Expressway, Greater Noida</p>
+                    <div class="mt-5 space-y-2 text-sm text-brand-800">
+                        <p><i class="fa-solid fa-phone mr-2 text-brand-500"></i>+91 9811515598</p>
+                        <p><i class="fa-solid fa-envelope mr-2 text-brand-500"></i>treasurerealties@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="bg-brand-50/50 py-16">
+            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                <p class="section-kicker text-center">Our Services</p>
+                <h2 class="mb-10 text-center font-display text-3xl text-brand-900 sm:text-4xl">End-to-End Property Support</h2>
+                <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+                    <article class="premium-card p-6">
+                        <i class="fa-solid fa-house text-2xl text-brand-500"></i>
+                        <h3 class="mt-4 text-lg font-semibold text-brand-900">Residential Buying</h3>
+                        <p class="mt-2 text-sm text-brand-700">Shortlisting, site visits, pricing checks, and negotiation support for apartments, villas, and plots.</p>
+                    </article>
+                    <article class="premium-card p-6">
+                        <i class="fa-solid fa-chart-line text-2xl text-brand-500"></i>
+                        <h3 class="mt-4 text-lg font-semibold text-brand-900">Investment Advisory</h3>
+                        <p class="mt-2 text-sm text-brand-700">Location growth analysis, rental potential review, and portfolio-aligned recommendations.</p>
+                    </article>
+                    <article class="premium-card p-6">
+                        <i class="fa-solid fa-file-shield text-2xl text-brand-500"></i>
+                        <h3 class="mt-4 text-lg font-semibold text-brand-900">Document Guidance</h3>
+                        <p class="mt-2 text-sm text-brand-700">Practical document checklist for safer transactions, including title chain and encumbrance checks.</p>
+                    </article>
+                    <article class="premium-card p-6">
+                        <i class="fa-solid fa-money-check-dollar text-2xl text-brand-500"></i>
+                        <h3 class="mt-4 text-lg font-semibold text-brand-900">Loan Readiness Help</h3>
+                        <p class="mt-2 text-sm text-brand-700">Budget planning, EMI comfort range, and lender document preparation support.</p>
+                    </article>
+                    <article class="premium-card p-6">
+                        <i class="fa-solid fa-key text-2xl text-brand-500"></i>
+                        <h3 class="mt-4 text-lg font-semibold text-brand-900">Resale & Leasing</h3>
+                        <p class="mt-2 text-sm text-brand-700">Positioning strategy, pricing alignment, and qualified buyer or tenant pipeline assistance.</p>
+                    </article>
+                    <article class="premium-card p-6">
+                        <i class="fa-solid fa-location-dot text-2xl text-brand-500"></i>
+                        <h3 class="mt-4 text-lg font-semibold text-brand-900">Locality Insights</h3>
+                        <p class="mt-2 text-sm text-brand-700">On-ground updates on infrastructure, demand trends, and long-term livability factors.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="blogs" class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+            <p class="section-kicker text-center">Knowledge Hub</p>
+            <h2 class="mb-10 text-center font-display text-3xl text-brand-900 sm:text-4xl">Latest Real Estate Blogs</h2>
+            <div class="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+                <a href="blogs/blog-1.html" class="blog-card premium-card p-6">
+                    <p class="text-xs font-semibold uppercase tracking-wider text-brand-700">Market Outlook</p>
+                    <h3 class="mt-2 text-xl font-semibold text-brand-900">India Real Estate Outlook: What 2026 Buyers Should Track</h3>
+                    <p class="mt-3 text-sm text-brand-700">Growth trends, demand shifts, and why disciplined due diligence matters more than hype.</p>
+                </a>
+                <a href="blogs/blog-2.html" class="blog-card premium-card p-6">
+                    <p class="text-xs font-semibold uppercase tracking-wider text-brand-700">Home Buying</p>
+                    <h3 class="mt-2 text-xl font-semibold text-brand-900">First-Time Buyer Checklist for Safer Property Decisions</h3>
+                    <p class="mt-3 text-sm text-brand-700">A practical framework before you pay token money or sign any booking form.</p>
+                </a>
+                <a href="blogs/blog-3.html" class="blog-card premium-card p-6">
+                    <p class="text-xs font-semibold uppercase tracking-wider text-brand-700">Valuation Basics</p>
+                    <h3 class="mt-2 text-xl font-semibold text-brand-900">Price vs Value: Why Appraisal Thinking Helps Buyers</h3>
+                    <p class="mt-3 text-sm text-brand-700">Understand comparables, intrinsic utility, and long-term value before final negotiation.</p>
+                </a>
+                <a href="blogs/blog-4.html" class="blog-card premium-card p-6">
+                    <p class="text-xs font-semibold uppercase tracking-wider text-brand-700">Finance</p>
+                    <h3 class="mt-2 text-xl font-semibold text-brand-900">Home Loan Readiness: Budget, EMI, and Documentation</h3>
+                    <p class="mt-3 text-sm text-brand-700">Set realistic eligibility expectations and reduce stress during sanction and disbursal.</p>
+                </a>
+                <a href="blogs/blog-5.html" class="blog-card premium-card p-6">
+                    <p class="text-xs font-semibold uppercase tracking-wider text-brand-700">Location Strategy</p>
+                    <h3 class="mt-2 text-xl font-semibold text-brand-900">Plot vs Apartment on Yamuna Expressway: A Practical Guide</h3>
+                    <p class="mt-3 text-sm text-brand-700">Compare liquidity, usage flexibility, and holding horizon before choosing an asset type.</p>
+                </a>
+                <a href="blogs/blog-6.html" class="blog-card premium-card p-6">
+                    <p class="text-xs font-semibold uppercase tracking-wider text-brand-700">Legal Checks</p>
+                    <h3 class="mt-2 text-xl font-semibold text-brand-900">Property Document Verification: 10 Must-Check Items</h3>
+                    <p class="mt-3 text-sm text-brand-700">Reduce transaction risk with a disciplined and repeatable legal checklist.</p>
+                </a>
+            </div>
+        </section>
+
+        <section id="testimonials" class="bg-brand-50/50 py-16">
+            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                <p class="section-kicker text-center">Testimonials</p>
+                <h2 class="mb-10 text-center font-display text-3xl text-brand-900 sm:text-4xl">What Clients Say</h2>
+                <div class="relative mx-auto max-w-3xl overflow-hidden rounded-3xl border border-brand-100 bg-white p-7 shadow-xl">
+                    <div id="testimonialTrack" class="testimonial-track">
+                        <blockquote class="testimonial-item">
+                            <p class="text-lg text-brand-800">“Treasure Realties guided us with patience and honesty. We finalized our family home without confusion.”</p>
+                            <footer class="mt-4 text-sm font-semibold text-brand-700">— Rajesh Sharma, Greater Noida</footer>
+                        </blockquote>
+                        <blockquote class="testimonial-item">
+                            <p class="text-lg text-brand-800">“Clear advice on legal checks and pricing helped me avoid a risky deal. Very professional experience.”</p>
+                            <footer class="mt-4 text-sm font-semibold text-brand-700">— Priya Mehta, Noida Extension</footer>
+                        </blockquote>
+                        <blockquote class="testimonial-item">
+                            <p class="text-lg text-brand-800">“From site visit to final registration guidance, everything was smooth and transparent.”</p>
+                            <footer class="mt-4 text-sm font-semibold text-brand-700">— Aman Verma, Jewar Corridor</footer>
+                        </blockquote>
+                    </div>
+                    <div class="mt-5 flex justify-center gap-2">
+                        <button class="dot active-dot" data-index="0" aria-label="Show testimonial 1"></button>
+                        <button class="dot" data-index="1" aria-label="Show testimonial 2"></button>
+                        <button class="dot" data-index="2" aria-label="Show testimonial 3"></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+            <div class="grid gap-6 lg:grid-cols-[1fr,1.1fr]">
+                <div class="premium-card p-6">
+                    <p class="section-kicker">Contact Us</p>
+                    <h2 class="mt-2 font-display text-3xl text-brand-900">Let’s Discuss Your Property Goal</h2>
+                    <p class="mt-3 text-brand-700">Share your requirement and we will get back with curated options and practical next steps.</p>
+                    <div class="mt-5 space-y-2 text-brand-800">
+                        <p><i class="fa-solid fa-phone mr-2 text-brand-500"></i>+91 9811515598</p>
+                        <p><i class="fa-solid fa-envelope mr-2 text-brand-500"></i>treasurerealties@gmail.com</p>
+                        <p><i class="fa-solid fa-location-dot mr-2 text-brand-500"></i>LKM SHOP NO SF-10, Gaur Yamuna City, Greater Noida</p>
+                    </div>
+                </div>
+                <form class="premium-card p-6" action="#" method="post">
+                    <div class="grid gap-4 sm:grid-cols-2">
+                        <div>
+                            <label for="name" class="mb-1 block text-sm font-medium text-brand-700">Full Name</label>
+                            <input id="name" name="name" type="text" class="w-full rounded-xl border border-brand-200 bg-white px-4 py-3 text-sm focus:border-brand-500 focus:outline-none" required>
+                        </div>
+                        <div>
+                            <label for="phone" class="mb-1 block text-sm font-medium text-brand-700">Phone</label>
+                            <input id="phone" name="phone" type="tel" class="w-full rounded-xl border border-brand-200 bg-white px-4 py-3 text-sm focus:border-brand-500 focus:outline-none" required>
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <label for="email" class="mb-1 block text-sm font-medium text-brand-700">Email</label>
+                        <input id="email" name="email" type="email" class="w-full rounded-xl border border-brand-200 bg-white px-4 py-3 text-sm focus:border-brand-500 focus:outline-none" required>
+                    </div>
+                    <div class="mt-4">
+                        <label for="message" class="mb-1 block text-sm font-medium text-brand-700">Requirement</label>
+                        <textarea id="message" name="message" rows="4" class="w-full rounded-xl border border-brand-200 bg-white px-4 py-3 text-sm focus:border-brand-500 focus:outline-none" required></textarea>
+                    </div>
+                    <button type="submit" class="mt-5 rounded-xl bg-brand-500 px-6 py-3 text-sm font-semibold text-white transition hover:bg-brand-700">Submit Inquiry</button>
+                </form>
+            </div>
+        </section>
+
+        <section class="mx-auto max-w-7xl px-4 pb-16 sm:px-6 lg:px-8">
+            <div class="map-wrap premium-card overflow-hidden p-2">
+                <iframe title="Treasure Realties Location"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3512.8719546045995!2d77.55726141117678!3d28.302202698903674!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cc735fef217e7%3A0x22e0874603fc4052!2sLord%20Krishna%20Mart!5e0!3m2!1sen!2sin!4v1776680420680!5m2!1sen!2sin"
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    class="h-[320px] w-full rounded-2xl border-0 sm:h-[420px]"></iframe>
+            </div>
+        </section>
+    </main>
+
+    <footer class="border-t border-brand-100 bg-[#fffcf6] pt-16 pb-8">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 gap-10 md:grid-cols-4 mb-10">
+                <div class="md:col-span-1">
+                    <img src="assets/logo.png" alt="Treasure Realties Logo" class="h-12 w-12 rounded-full object-cover border border-brand-200 mb-4">
+                    <p class="text-xs font-semibold uppercase tracking-wider text-brand-700 mb-2">Treasure Realties</p>
+                    <p class="text-sm text-brand-700">Building Trust, Creating Value. Premium real estate advisory in Yamuna Expressway and Greater Noida.</p>
+                    <div class="mt-5 flex gap-3">
+                        <a href="#" class="inline-flex h-8 w-8 items-center justify-center rounded-full bg-brand-500 text-white transition hover:bg-brand-700"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="inline-flex h-8 w-8 items-center justify-center rounded-full bg-brand-500 text-white transition hover:bg-brand-700"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="inline-flex h-8 w-8 items-center justify-center rounded-full bg-brand-500 text-white transition hover:bg-brand-700"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="mb-4 text-sm font-bold uppercase tracking-wider text-brand-900">Quick Links</h3>
+                    <ul class="space-y-3 text-sm text-brand-800">
+                        <li><a href="index.html" class="transition hover:text-brand-500">Home</a></li>
+                        <li><a href="about.html" class="transition hover:text-brand-500">About Us</a></li>
+                        <li><a href="#services" class="transition hover:text-brand-500">Services</a></li>
+                        <li><a href="#blogs" class="transition hover:text-brand-500">Insights & Blogs</a></li>
+                        <li><a href="contact.html" class="transition hover:text-brand-500">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="mb-4 text-sm font-bold uppercase tracking-wider text-brand-900">Services</h3>
+                    <ul class="space-y-3 text-sm text-brand-800">
+                        <li>Residential Buying</li>
+                        <li>Investment Advisory</li>
+                        <li>Document Guidance</li>
+                        <li>Locality Insights</li>
+                        <li>Resale & Leasing</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="mb-4 text-sm font-bold uppercase tracking-wider text-brand-900">Reach Us</h3>
+                    <ul class="space-y-3 text-sm text-brand-800">
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-location-dot mt-1 text-brand-500"></i> LKM SHOP NO SF-10, Gaur Yamuna City, Greater Noida</li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-phone text-brand-500"></i> <a href="tel:+919811515598" class="hover:text-brand-500">+91 9811515598</a></li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-envelope text-brand-500"></i> <a href="mailto:treasurerealties@gmail.com" class="hover:text-brand-500">treasurerealties@gmail.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="flex flex-col items-center justify-between gap-4 border-t border-brand-200/50 pt-8 text-center text-xs text-brand-700 sm:flex-row sm:text-left">
+                <p>© <span id="year">2026</span> Treasure Realties. All rights reserved.</p>
+                <div class="flex gap-4 font-semibold">
+                    <a href="#" class="transition hover:text-brand-500">Privacy Policy</a>
+                    <a href="#" class="transition hover:text-brand-500">Terms of Use</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "RealEstateAgent",
+        "name": "Treasure Realties",
+        "image": "https://i.ibb.co/Y7Fvnq3J/Treasure-Realties-Logo-1.png",
+        "telephone": "+919811515598",
+        "email": "treasurerealties@gmail.com",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "LKM SHOP NO SF-10, Gaur Yamuna City",
+            "addressLocality": "Greater Noida",
+            "addressRegion": "Uttar Pradesh",
+            "addressCountry": "IN"
+        },
+        "slogan": "Building Trust, Creating Value"
+    }
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
