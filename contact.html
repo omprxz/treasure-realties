@@ -1,172 +1,248 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Treasure Realties | Building Trust, Creating Value</title>
-    <meta name="description" content="Treasure Realties helps you buy, sell, and invest in quality real estate across Yamuna Expressway and Greater Noida with transparent guidance.">
-    <meta name="keywords" content="Treasure Realties, real estate, Yamuna Expressway, Greater Noida, property consultant, home buying, property investment">
-    <meta name="author" content="Treasure Realties">
-    <meta property="og:title" content="Treasure Realties | Building Trust, Creating Value">
-    <meta property="og:description" content="Premium real estate advisory for homes, plots, and investment opportunities.">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="https://i.ibb.co/Y7Fvnq3J/Treasure-Realties-Logo-1.png">
-    <meta name="theme-color" content="#C3933E">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        brand: {
-                            50: '#f9f5ee',
-                            100: '#f2e7d2',
-                            300: '#d8b882',
-                            500: '#c3933e',
-                            700: '#5b3922',
-                            900: '#2c1909'
-                        }
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        display: ['Cormorant Garamond', 'serif']
-                    }
-                }
-            }
-        };
-    </script>
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us — Treasure Realties</title>
+  <meta name="description" content="Get in touch with Treasure Realties — real estate experts along the Yamuna Expressway. Call, WhatsApp, or fill our contact form." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-[#fffdf9] text-brand-900 antialiased">
-    <div class="floating-contact">
-        <a href="tel:+919811515598" class="contact-pill" aria-label="Call Treasure Realties">
-            <i class="fa-solid fa-phone"></i>
-            <span>Call</span>
-        </a>
-        <a href="https://wa.me/919811515598" target="_blank" rel="noopener" class="contact-pill" aria-label="WhatsApp Treasure Realties">
-            <i class="fa-brands fa-whatsapp"></i>
-            <span>WhatsApp</span>
-        </a>
-        <a href="mailto:treasurerealties@gmail.com" class="contact-pill" aria-label="Email Treasure Realties">
-            <i class="fa-solid fa-envelope"></i>
-            <span>Email</span>
-        </a>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header id="header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-main">Treasure Realties</span>
+        <span class="logo-sub">Yamuna Expressway</span>
+      </a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html" class="active">Contact</a>
+        <a href="contact.html" class="nav-cta">Get in Touch</a>
+      </nav>
+      <button class="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
     </div>
+  </header>
 
-    <header class="sticky top-0 z-40 border-b border-brand-100/70 bg-white/90 backdrop-blur">
-        <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
-            <a href="#home" class="flex items-center gap-3">
-                <img src="assets/logo.png" alt="Treasure Realties Logo" class="h-11 w-11 rounded-full border border-brand-100 object-cover">
-                <div>
-                    <p class="font-display text-2xl leading-none text-brand-900">Treasure Realties</p>
-                    <p class="text-xs font-medium tracking-wide text-brand-700">Building Trust, Creating Value</p>
-                </div>
-            </a>
+  <div class="mobile-menu-overlay"></div>
+  <nav class="mobile-menu">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="contact.html">Contact</a>
+    <a href="contact.html" class="mobile-cta">Get in Touch</a>
+  </nav>
 
-            <button id="menuBtn" class="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-brand-200 text-brand-900 md:hidden" aria-label="Toggle menu">
-                <i class="fa-solid fa-bars"></i>
-            </button>
+  <!-- ===== PAGE HERO ===== -->
+  <section class="page-hero">
+    <div class="container">
+      <p class="section-label">Reach Out</p>
+      <div class="gold-line centered"></div>
+      <h1>Contact Us</h1>
+      <p style="color:rgba(255,255,255,0.7);margin-top:16px;font-size:16px;max-width:500px;margin-left:auto;margin-right:auto;">We're here to answer your questions and help you find the perfect property. Let's talk.</p>
+    </div>
+  </section>
 
-            <nav id="mainNav" class="hidden gap-6 text-sm font-semibold text-brand-800 md:flex">
-                <a href="index.html" class="hover:text-brand-500">Home</a>
-                <a href="about.html" class="hover:text-brand-500">About</a>
-                <a href="index.html#services" class="hover:text-brand-500">Services</a>
-                <a href="index.html#blogs" class="hover:text-brand-500">Blogs</a>
-                <a href="index.html#testimonials" class="hover:text-brand-500">Testimonials</a>
-                <a href="contact.html" class="hover:text-brand-500">Contact</a>
-            </nav>
+  <!-- ===== CONTACT MAIN ===== -->
+  <section class="section-pad" style="background:var(--bg);">
+    <div class="container">
+      <div class="contact-grid">
+
+        <!-- Contact Info -->
+        <div>
+          <p class="section-label">Our Details</p>
+          <div class="gold-line"></div>
+          <h2 class="section-title" style="margin-bottom:8px;">Get in Touch</h2>
+          <p style="color:var(--text-muted);margin-bottom:36px;font-size:14px;">Our team is available six days a week to assist you with any queries regarding buying, renting, or property advisory services.</p>
+
+          <div class="contact-info-item">
+            <div class="contact-info-icon"><i class="fa fa-location-dot"></i></div>
+            <div>
+              <h4>Office Address</h4>
+              <p>Sector 22C, Yamuna Expressway<br>Greater Noida, Uttar Pradesh — 201308</p>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-info-icon"><i class="fa fa-phone"></i></div>
+            <div>
+              <h4>Phone &amp; WhatsApp</h4>
+              <p><a href="tel:+919876543210" style="color:var(--text-muted);transition:color 0.3s;" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--text-muted)'">+91 98765 43210</a></p>
+              <p style="font-size:12px;color:var(--text-muted);margin-top:4px;">Mon – Sat, 9:00 AM – 7:00 PM</p>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-info-icon"><i class="fa fa-envelope"></i></div>
+            <div>
+              <h4>Email</h4>
+              <p><a href="mailto:info@treasurerealties.in" style="color:var(--text-muted);transition:color 0.3s;" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--text-muted)'">info@treasurerealties.in</a></p>
+            </div>
+          </div>
+
+          <!-- Quick action buttons -->
+          <div style="margin-top:40px;">
+            <p style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:16px;">Quick Connect</p>
+            <div style="display:flex;flex-wrap:wrap;gap:12px;">
+              <a href="https://wa.me/919876543210" target="_blank" rel="noopener" class="btn-gold" style="display:flex;align-items:center;gap:10px;padding:12px 24px;font-size:13px;background:#25D366;border-color:#25D366;color:#fff;">
+                <i class="fab fa-whatsapp"></i> WhatsApp
+              </a>
+              <a href="tel:+919876543210" class="btn-outline" style="display:flex;align-items:center;gap:10px;padding:12px 24px;font-size:13px;">
+                <i class="fa fa-phone"></i> Call Now
+              </a>
+            </div>
+          </div>
+
+          <!-- Business hours -->
+          <div style="margin-top:40px;padding:28px;border:1px solid var(--border);background:var(--white);">
+            <p style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:16px;">Business Hours</p>
+            <div style="display:flex;flex-direction:column;gap:12px;">
+              <div style="display:flex;justify-content:space-between;font-size:13px;">
+                <span style="color:var(--text-muted);">Monday – Friday</span>
+                <span style="color:var(--brown);font-weight:500;">9:00 AM – 7:00 PM</span>
+              </div>
+              <div style="display:flex;justify-content:space-between;font-size:13px;">
+                <span style="color:var(--text-muted);">Saturday</span>
+                <span style="color:var(--brown);font-weight:500;">10:00 AM – 5:00 PM</span>
+              </div>
+              <div style="display:flex;justify-content:space-between;font-size:13px;">
+                <span style="color:var(--text-muted);">Sunday</span>
+                <span style="color:#e74c3c;font-weight:500;">By Appointment Only</span>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <nav id="mobileNav" class="hidden border-t border-brand-100 bg-white px-4 py-4 md:hidden">
-            <div class="flex flex-col gap-3 text-sm font-semibold text-brand-800">
-                <a href="index.html" class="mobile-link">Home</a>
-                <a href="about.html" class="mobile-link">About</a>
-                <a href="index.html#services" class="mobile-link">Services</a>
-                <a href="index.html#blogs" class="mobile-link">Blogs</a>
-                <a href="index.html#testimonials" class="mobile-link">Testimonials</a>
-                <a href="contact.html" class="mobile-link">Contact</a>
-            </div>
-        </nav>
-    </header>
+        <!-- Contact Form -->
+        <div class="contact-form-card">
+          <p class="section-label">Send a Message</p>
+          <div class="gold-line"></div>
+          <h3 style="font-family:'Playfair Display',serif;font-size:26px;color:var(--brown);margin-bottom:8px;">We'd Love to Hear From You</h3>
+          <p style="font-size:14px;color:var(--text-muted);margin-bottom:32px;">Fill in the form and one of our advisors will get back to you within 24 hours.</p>
 
-    <main class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8"><div class="text-center mb-10"><p class="section-kicker">Get In Touch</p><h1 class="font-display text-4xl text-brand-900 sm:text-5xl mt-2">Contact Treasure Realties</h1></div><div class="grid gap-8 lg:grid-cols-[1fr,1.2fr]"><div class="space-y-6"><div class="premium-card p-6"><h3 class="text-xl font-semibold text-brand-900">Head Office</h3><p class="mt-3 text-brand-700 leading-relaxed">LKM SHOP NO SF-10<br>Gaur Yamuna City<br>Yamuna Expressway, Greater Noida</p></div><div class="premium-card p-6 space-y-4"><p><a href="tel:+919811515598" class="flex gap-4 items-center text-brand-800 hover:text-brand-500 font-semibold transition"><i class="fa-solid fa-phone text-2xl"></i> +91 9811515598</a></p><p><a href="mailto:treasurerealties@gmail.com" class="flex gap-4 items-center text-brand-800 hover:text-brand-500 font-semibold transition"><i class="fa-solid fa-envelope text-2xl"></i> treasurerealties@gmail.com</a></p><p><a href="https://wa.me/919811515598" target="_blank" rel="noopener" class="flex gap-4 items-center text-brand-800 hover:text-brand-500 font-semibold transition"><i class="fa-brands fa-whatsapp text-2xl"></i> WhatsApp Us</a></p></div></div><form class="premium-card p-8" action="#" method="post"><h3 class="text-2xl font-display text-brand-900 mb-6">Drop a Message</h3><div class="grid gap-5 sm:grid-cols-2 mb-5"><div><label class="block text-sm font-medium text-brand-700 mb-1">Name</label><input type="text" class="w-full rounded-xl border border-brand-200 bg-white px-4 py-3 text-sm focus:border-brand-500 focus:outline-none focus:ring-1 focus:ring-brand-500" required></div><div><label class="block text-sm font-medium text-brand-700 mb-1">Phone</label><input type="tel" class="w-full rounded-xl border border-brand-200 bg-white px-4 py-3 text-sm focus:border-brand-500 focus:outline-none focus:ring-1 focus:ring-brand-500" required></div></div><div class="mb-5"><label class="block text-sm font-medium text-brand-700 mb-1">Email</label><input type="email" class="w-full rounded-xl border border-brand-200 bg-white px-4 py-3 text-sm focus:border-brand-500 focus:outline-none focus:ring-1 focus:ring-brand-500" required></div><div class="mb-6"><label class="block text-sm font-medium text-brand-700 mb-1">Your Requirement</label><textarea rows="4" class="w-full rounded-xl border border-brand-200 bg-white px-4 py-3 text-sm focus:border-brand-500 focus:outline-none focus:ring-1 focus:ring-brand-500" required></textarea></div><button type="submit" class="w-full rounded-xl bg-brand-500 px-6 py-4 font-semibold text-white transition hover:bg-brand-700">Send Inquiry</button></form></div></main>
+          <form id="contactForm" novalidate>
+            <div class="form-group">
+              <label for="name">Full Name *</label>
+              <input type="text" id="name" name="name" placeholder="e.g. Rahul Sharma" required />
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone Number *</label>
+              <input type="tel" id="phone" name="phone" placeholder="e.g. +91 98765 43210" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="e.g. rahul@example.com" />
+            </div>
+            <div class="form-group">
+              <label for="service">Service Interested In</label>
+              <select id="service" name="service" style="width:100%;padding:14px 16px;border:1px solid var(--border);background:var(--bg);font-family:'Poppins',sans-serif;font-size:14px;color:var(--text);outline:none;transition:border-color 0.3s;appearance:none;cursor:pointer;">
+                <option value="">Select a service…</option>
+                <option value="buying">Property Buying</option>
+                <option value="rental">Rental Services</option>
+                <option value="interior">Interior Design</option>
+                <option value="advisory">Investment Advisory</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Your Message *</label>
+              <textarea id="message" name="message" placeholder="Tell us about your requirements, budget, or any questions you have…" required></textarea>
+            </div>
+            <button type="submit" class="btn-gold form-btn">Send Message <i class="fa fa-arrow-right" style="margin-left:8px;"></i></button>
+          </form>
 
-    <footer class="border-t border-brand-100 bg-[#fffcf6] pt-16 pb-8">
-        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 gap-10 md:grid-cols-4 mb-10">
-                <div class="md:col-span-1">
-                    <img src="assets/logo.png" alt="Treasure Realties Logo" class="h-12 w-12 rounded-full object-cover border border-brand-200 mb-4">
-                    <p class="text-xs font-semibold uppercase tracking-wider text-brand-700 mb-2">Treasure Realties</p>
-                    <p class="text-sm text-brand-700">Building Trust, Creating Value. Premium real estate advisory in Yamuna Expressway and Greater Noida.</p>
-                    <div class="mt-5 flex gap-3">
-                        <a href="#" class="inline-flex h-8 w-8 items-center justify-center rounded-full bg-brand-500 text-white transition hover:bg-brand-700"><i class="fa-brands fa-facebook-f"></i></a>
-                        <a href="#" class="inline-flex h-8 w-8 items-center justify-center rounded-full bg-brand-500 text-white transition hover:bg-brand-700"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="#" class="inline-flex h-8 w-8 items-center justify-center rounded-full bg-brand-500 text-white transition hover:bg-brand-700"><i class="fa-brands fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-                <div>
-                    <h3 class="mb-4 text-sm font-bold uppercase tracking-wider text-brand-900">Quick Links</h3>
-                    <ul class="space-y-3 text-sm text-brand-800">
-                        <li><a href="index.html" class="transition hover:text-brand-500">Home</a></li>
-                        <li><a href="about.html" class="transition hover:text-brand-500">About Us</a></li>
-                        <li><a href="#services" class="transition hover:text-brand-500">Services</a></li>
-                        <li><a href="#blogs" class="transition hover:text-brand-500">Insights & Blogs</a></li>
-                        <li><a href="contact.html" class="transition hover:text-brand-500">Contact Us</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 class="mb-4 text-sm font-bold uppercase tracking-wider text-brand-900">Services</h3>
-                    <ul class="space-y-3 text-sm text-brand-800">
-                        <li>Residential Buying</li>
-                        <li>Investment Advisory</li>
-                        <li>Document Guidance</li>
-                        <li>Locality Insights</li>
-                        <li>Resale & Leasing</li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 class="mb-4 text-sm font-bold uppercase tracking-wider text-brand-900">Reach Us</h3>
-                    <ul class="space-y-3 text-sm text-brand-800">
-                        <li class="flex items-start gap-3"><i class="fa-solid fa-location-dot mt-1 text-brand-500"></i> LKM SHOP NO SF-10, Gaur Yamuna City, Greater Noida</li>
-                        <li class="flex items-center gap-3"><i class="fa-solid fa-phone text-brand-500"></i> <a href="tel:+919811515598" class="hover:text-brand-500">+91 9811515598</a></li>
-                        <li class="flex items-center gap-3"><i class="fa-solid fa-envelope text-brand-500"></i> <a href="mailto:treasurerealties@gmail.com" class="hover:text-brand-500">treasurerealties@gmail.com</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="flex flex-col items-center justify-between gap-4 border-t border-brand-200/50 pt-8 text-center text-xs text-brand-700 sm:flex-row sm:text-left">
-                <p>© <span id="year">2026</span> Treasure Realties. All rights reserved.</p>
-                <div class="flex gap-4 font-semibold">
-                    <a href="#" class="transition hover:text-brand-500">Privacy Policy</a>
-                    <a href="#" class="transition hover:text-brand-500">Terms of Use</a>
-                </div>
-            </div>
+          <p style="font-size:11px;color:var(--text-muted);margin-top:20px;text-align:center;">
+            <i class="fa fa-lock" style="color:var(--gold);margin-right:4px;"></i>
+            Your information is kept strictly confidential and never shared with third parties.
+          </p>
         </div>
-    </footer>
 
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "RealEstateAgent",
-        "name": "Treasure Realties",
-        "image": "https://i.ibb.co/Y7Fvnq3J/Treasure-Realties-Logo-1.png",
-        "telephone": "+919811515598",
-        "email": "treasurerealties@gmail.com",
-        "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "LKM SHOP NO SF-10, Gaur Yamuna City",
-            "addressLocality": "Greater Noida",
-            "addressRegion": "Uttar Pradesh",
-            "addressCountry": "IN"
-        },
-        "slogan": "Building Trust, Creating Value"
-    }
-    </script>
+      </div>
+    </div>
+  </section>
 
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script src="js/main.js"></script>
+  <!-- ===== MAP ===== -->
+  <section class="section-pad" style="background:var(--white);padding-top:0;">
+    <div class="container">
+      <div style="text-align:center;padding:60px 0 40px;">
+        <p class="section-label">Find Us</p>
+        <div class="gold-line centered"></div>
+        <h2 class="section-title">Visit Our Office</h2>
+        <p style="color:var(--text-muted);margin-top:12px;font-size:14px;">We welcome walk-ins during office hours. Our team is always ready to sit down with you.</p>
+      </div>
+      <div class="map-container">
+        <div class="map-header">
+          <i class="fa fa-location-dot"></i>
+          <div>
+            <h3>Treasure Realties Office</h3>
+            <p>Sector 22C, Yamuna Expressway, Greater Noida, Uttar Pradesh — 201308</p>
+          </div>
+        </div>
+        <div class="map-embed-placeholder">
+          <i class="fa fa-map-location-dot"></i>
+          <p>Google Map — Yamuna Expressway, Greater Noida</p>
+          <p style="font-size:12px;margin-top:4px;color:rgba(0,0,0,0.4);">Replace this with an embedded Google Maps iframe for your office location</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="container">
+      <div class="footer-main">
+        <div class="footer-logo">
+          <div class="logo">
+            <span class="logo-main">Treasure Realties</span>
+            <span class="logo-sub">Yamuna Expressway</span>
+          </div>
+          <p>Your trusted real estate partner for premium properties along the Yamuna Expressway corridor. Integrity, expertise, and personalised service — always.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Our Services</h4>
+          <ul>
+            <li><a href="services.html">Property Buying</a></li>
+            <li><a href="services.html">Rental Services</a></li>
+            <li><a href="services.html">Interior Design</a></li>
+            <li><a href="contact.html">Consultation</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact Us</h4>
+          <div class="footer-contact-item"><i class="fa fa-location-dot"></i><span>Sector 22C, Yamuna Expressway, Greater Noida, UP 201308</span></div>
+          <div class="footer-contact-item"><i class="fa fa-phone"></i><span>+91 98765 43210</span></div>
+          <div class="footer-contact-item"><i class="fa fa-envelope"></i><span>info@treasurerealties.in</span></div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2025 Treasure Realties. All rights reserved.</span>
+        <span>Designed with care for Bhagat Singh &amp; Team</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== FLOATING BUTTONS ===== -->
+  <div class="floating-btns">
+    <a href="https://wa.me/919876543210" class="float-btn whatsapp" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i><span class="tooltip">WhatsApp Us</span></a>
+    <a href="tel:+919876543210" class="float-btn call" aria-label="Call"><i class="fa fa-phone"></i><span class="tooltip">Call Us</span></a>
+    <a href="mailto:info@treasurerealties.in" class="float-btn email" aria-label="Email"><i class="fa fa-envelope"></i><span class="tooltip">Email Us</span></a>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
