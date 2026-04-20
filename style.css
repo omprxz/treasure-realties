@@ -111,12 +111,12 @@ ul { list-style: none; }
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 18px 24px;
+  padding: 12px 24px;
   max-width: 1200px;
   margin: 0 auto;
   transition: padding 0.3s;
 }
-#header.scrolled .header-inner { padding: 12px 24px; }
+#header.scrolled .header-inner { padding: 8px 24px; }
 
 .logo {
   display: flex;
@@ -658,7 +658,15 @@ footer {
   padding: 64px 0 48px;
 }
 .footer-logo .logo-main { color: var(--white); }
-.footer-logo p { font-family: 'DM Sans', sans-serif; font-size: 13px; margin-top: 16px; line-height: 1.7; color: rgba(255,255,255,0.5); }
+.footer-tagline { 
+  font-family: 'DM Serif Display', serif; 
+  font-size: 14px; 
+  color: var(--gold); 
+  margin-top: -4px; 
+  margin-bottom: 20px; 
+  letter-spacing: 0.5px;
+}
+.footer-logo p { font-family: 'DM Sans', sans-serif; font-size: 13px; line-height: 1.7; color: rgba(255,255,255,0.5); }
 .footer-col h4 {
   font-family: 'DM Sans', sans-serif;
   font-size: 11px;
@@ -928,19 +936,19 @@ footer {
   flex-direction: row;
 }
 .header-logo-img {
-  height: 58px;
+  height: 72px;
   width: auto;
   display: block;
   object-fit: contain;
 }
-#header.scrolled .header-logo-img { height: 44px; }
+#header.scrolled .header-logo-img { height: 58px; }
 .footer-logo-img {
-  height: 56px;
+  height: 98px;
   width: auto;
   display: block;
   object-fit: contain;
   filter: brightness(10);  /* Make logo bright/white on dark footer */
-  margin-bottom: 4px;
+  margin-bottom: 8px;
 }
 
 /* ===== HERO SPLIT LAYOUT (PC only: content left + form right) ===== */
