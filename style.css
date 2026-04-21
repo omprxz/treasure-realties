@@ -903,17 +903,20 @@ footer {
   .why-grid { grid-template-columns: 1fr; }
 }
 
-@media (max-width: 768px) {
-  .nav-links { display: none; }
-  .hamburger { display: flex; }
-
-  .hero-slider { margin-top: 0; min-height: 100vh; min-height: 100svh; }
-
+@media (max-width: 1024px) {
   #header { background: transparent; border-bottom: none; }
   #header.scrolled { background: var(--white); border-bottom: 1px solid var(--border); }
   #header:not(.scrolled) .header-logo-img { filter: brightness(10); }
+  #header:not(.scrolled) .nav-links a { color: var(--white); }
+  #header:not(.scrolled) .nav-links a.active { color: var(--gold); }
   #header:not(.scrolled) .hamburger span { background: var(--white); }
   .hamburger.open span { background: var(--brown) !important; }
+}
+
+@media (max-width: 768px) {
+  .nav-links { display: none; }
+  .hamburger { display: flex; }
+  .hero-slider { margin-top: 0; min-height: 100vh; min-height: 100svh; }
 
 
   .about-preview-grid,
