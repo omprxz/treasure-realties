@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>All Projects — Treasure Realties</title>
+  <meta name="description" content="Explore all featured real estate projects by Treasure Realties along the Yamuna Expressway — premium residential and commercial developments." />
+  <link rel="icon" type="image/x-icon" href="../favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <style>
+    body { padding-top: 91px; }
+    .all-projects-hero {
+      background: var(--dark-brown);
+      padding: 72px 0 60px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .all-projects-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at center, rgba(212,175,55,0.08) 0%, transparent 70%);
+    }
+    .all-projects-hero .section-label { color: var(--gold); }
+    .all-projects-hero h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(32px, 5vw, 52px);
+      color: var(--white);
+      margin: 10px 0 16px;
+    }
+    .all-projects-hero p {
+      font-size: 16px;
+      color: rgba(255,255,255,0.6);
+      max-width: 520px;
+      margin: 0 auto;
+    }
+    .all-projects-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+      padding: 72px 0;
+    }
+    .listing-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      overflow: hidden;
+      transition: transform 0.3s, box-shadow 0.3s;
+      display: flex;
+      flex-direction: column;
+    }
+    .listing-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 16px 48px rgba(31,20,13,0.14);
+    }
+    .listing-card-img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.5s;
+    }
+    .listing-card:hover .listing-card-img { transform: scale(1.04); }
+    .listing-card-img-wrap { overflow: hidden; position: relative; }
+    .listing-card-badge {
+      position: absolute;
+      top: 14px; left: 14px;
+      background: var(--gold);
+      color: var(--dark-brown);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      padding: 4px 10px;
+      text-transform: uppercase;
+    }
+    .listing-card-body {
+      padding: 22px 20px 20px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .listing-card-dev {
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+    .listing-card-body h3 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 18px;
+      color: var(--brown);
+      margin-bottom: 8px;
+    }
+    .listing-card-body p {
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.6;
+      flex: 1;
+      margin-bottom: 16px;
+    }
+    .listing-card-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 16px;
+    }
+    .lc-tag {
+      padding: 3px 10px;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      font-size: 11px;
+      color: var(--text-muted);
+      font-weight: 600;
+    }
+    .listing-card-link {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 16px;
+      background: var(--dark-brown);
+      color: var(--gold);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      transition: background 0.3s;
+      margin: 0 -20px -20px;
+    }
+    .listing-card-link:hover { background: var(--brown); }
+
+    @media (max-width: 1024px) { .all-projects-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 640px) { .all-projects-grid { grid-template-columns: 1fr; gap: 20px; } }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header id="header" style="position:fixed;top:0;left:0;right:0;z-index:900;background:rgba(255,255,255,0.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--border);">
+    <div class="header-inner">
+      <a href="../index.html" class="logo logo-img-wrap">
+        <img src="../assets/Treasure Realties Logo.png" alt="Treasure Realties" class="header-logo-img" />
+      </a>
+      <nav class="nav-links">
+        <a href="../index.html">Home</a>
+        <a href="../about.html">About</a>
+        <a href="../services.html">Services</a>
+        <a href="index.html" class="active">Projects</a>
+        <a href="../contact.html">Contact</a>
+        <a href="#" class="nav-cta" id="navGetInTouch">Get in Touch</a>
+      </nav>
+      <button class="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+  <div class="mobile-menu-overlay"></div>
+  <nav class="mobile-menu">
+    <a href="../index.html">Home</a>
+    <a href="../about.html">About</a>
+    <a href="../services.html">Services</a>
+    <a href="index.html">Projects</a>
+    <a href="../contact.html">Contact</a>
+    <a href="#" class="mobile-cta">Get in Touch</a>
+  </nav>
+
+  <!-- HERO -->
+  <section class="all-projects-hero">
+    <div class="container" style="position:relative;z-index:1;">
+      <p class="section-label">Curated Developments</p>
+      <div class="gold-line centered"></div>
+      <h1>Featured Projects</h1>
+      <p>Explore premium residential &amp; commercial projects along the Yamuna Expressway, handpicked by Treasure Realties.</p>
+    </div>
+  </section>
+
+  <!-- PROJECTS GRID -->
+  <section style="background:var(--bg);">
+    <div class="container">
+      <div class="all-projects-grid">
+
+        <!-- GYC -->
+        <div class="listing-card">
+          <div class="listing-card-img-wrap">
+            <img class="listing-card-img" src="../assets/projects/gyc/images/gyc-image-01.jpg" alt="Gaur Yamuna City" />
+            <span class="listing-card-badge">Residential</span>
+          </div>
+          <div class="listing-card-body">
+            <div class="listing-card-dev">Gaur Group</div>
+            <h3>Gaur Yamuna City</h3>
+            <p>An integrated township spread across 250 acres, offering 1BHK to 4BHK apartments, villas, and commercial spaces along the Yamuna Expressway.</p>
+            <div class="listing-card-meta">
+              <span class="lc-tag">1–4 BHK</span>
+              <span class="lc-tag">Yamuna Expressway</span>
+              <span class="lc-tag">RERA Approved</span>
+            </div>
+            <a href="gyc.html" class="listing-card-link">View Project <i class="fa fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Godrej -->
+        <div class="listing-card">
+          <div class="listing-card-img-wrap">
+            <img class="listing-card-img" src="../assets/projects/godrej/images/godrej-image-01.jpg" alt="Godrej Tropical Isle" />
+            <span class="listing-card-badge">Luxury</span>
+          </div>
+          <div class="listing-card-body">
+            <div class="listing-card-dev">Godrej Properties</div>
+            <h3>Godrej Tropical Isle</h3>
+            <p>Ultra-luxury high-rise residences in Sector 146, Noida — featuring sky amenities, lush green landscapes, and IGBC Green certification.</p>
+            <div class="listing-card-meta">
+              <span class="lc-tag">2–4 BHK</span>
+              <span class="lc-tag">Sector 146, Noida</span>
+              <span class="lc-tag">Luxury</span>
+            </div>
+            <a href="godrej.html" class="listing-card-link">View Project <i class="fa fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- ATS -->
+        <div class="listing-card">
+          <div class="listing-card-img-wrap">
+            <img class="listing-card-img" src="../assets/projects/ats/images/ats-image-03.jpg" alt="ATS Knightsbridge" />
+            <span class="listing-card-badge">Ultra Luxury</span>
+          </div>
+          <div class="listing-card-body">
+            <div class="listing-card-dev">ATS Group</div>
+            <h3>ATS Knightsbridge</h3>
+            <p>One of India's most luxurious residential developments in Sector 124, Noida — with world-class amenities and panoramic views.</p>
+            <div class="listing-card-meta">
+              <span class="lc-tag">4–6 BHK</span>
+              <span class="lc-tag">Sector 124, Noida</span>
+              <span class="lc-tag">Ultra Luxury</span>
+            </div>
+            <a href="ats.html" class="listing-card-link">View Project <i class="fa fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- ACE -->
+        <div class="listing-card">
+          <div class="listing-card-img-wrap">
+            <img class="listing-card-img" src="../assets/projects/ace/images/ace-image-01.webp" alt="ACE Divino" />
+            <span class="listing-card-badge">Residential</span>
+          </div>
+          <div class="listing-card-body">
+            <div class="listing-card-dev">ACE Group</div>
+            <h3>ACE Divino</h3>
+            <p>Premium 2 &amp; 3 BHK residences in Greater Noida West featuring modern architecture, state-of-the-art amenities, and excellent connectivity.</p>
+            <div class="listing-card-meta">
+              <span class="lc-tag">2–3 BHK</span>
+              <span class="lc-tag">Greater Noida West</span>
+              <span class="lc-tag">RERA Approved</span>
+            </div>
+            <a href="ace.html" class="listing-card-link">View Project <i class="fa fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Arihant -->
+        <div class="listing-card">
+          <div class="listing-card-img-wrap">
+            <img class="listing-card-img" src="../assets/projects/arihant/images/arihant-image-03.jpg" alt="Arihant Arden" />
+            <span class="listing-card-badge">Affordable</span>
+          </div>
+          <div class="listing-card-body">
+            <div class="listing-card-dev">Arihant Buildcon</div>
+            <h3>Arihant Arden</h3>
+            <p>Thoughtfully designed 1, 2 &amp; 3 BHK apartments in Greater Noida West, offering smart homes with modern amenities at affordable prices.</p>
+            <div class="listing-card-meta">
+              <span class="lc-tag">1–3 BHK</span>
+              <span class="lc-tag">Greater Noida West</span>
+              <span class="lc-tag">Affordable</span>
+            </div>
+            <a href="arihant.html" class="listing-card-link">View Project <i class="fa fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Samridhi -->
+        <div class="listing-card">
+          <div class="listing-card-img-wrap">
+            <img class="listing-card-img" src="../assets/projects/samridhi/images/samridhi-image-05.jpg" alt="Samridhi Grand Avenue" />
+            <span class="listing-card-badge">Residential</span>
+          </div>
+          <div class="listing-card-body">
+            <div class="listing-card-dev">Samridhi Group</div>
+            <h3>Samridhi Grand Avenue</h3>
+            <p>Spacious 2 &amp; 3 BHK apartments in Noida Extension, offering large floor plates, open green spaces and impressive amenities.</p>
+            <div class="listing-card-meta">
+              <span class="lc-tag">2–3 BHK</span>
+              <span class="lc-tag">Noida Extension</span>
+              <span class="lc-tag">Ready to Move</span>
+            </div>
+            <a href="samridhi.html" class="listing-card-link">View Project <i class="fa fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Eldeco -->
+        <div class="listing-card">
+          <div class="listing-card-img-wrap">
+            <img class="listing-card-img" src="../assets/projects/eldeco/images/eldeco-image-01.jpg" alt="Eldeco Acclaim" />
+            <span class="listing-card-badge">Residential</span>
+          </div>
+          <div class="listing-card-body">
+            <div class="listing-card-dev">Eldeco Group</div>
+            <h3>Eldeco Acclaim</h3>
+            <p>Premium residential township in Sector 119, Noida — featuring 2 &amp; 3 BHK apartments with lush landscaping and world-class clubhouse.</p>
+            <div class="listing-card-meta">
+              <span class="lc-tag">2–3 BHK</span>
+              <span class="lc-tag">Sector 119, Noida</span>
+              <span class="lc-tag">RERA Approved</span>
+            </div>
+            <a href="eldeco.html" class="listing-card-link">View Project <i class="fa fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Nimbus -->
+        <div class="listing-card">
+          <div class="listing-card-img-wrap">
+            <img class="listing-card-img" src="../assets/projects/nimbus/images/nimbus-image-04.webp" alt="Nimbus The Golden Palm" />
+            <span class="listing-card-badge">Residential</span>
+          </div>
+          <div class="listing-card-body">
+            <div class="listing-card-dev">Nimbus Group</div>
+            <h3>Nimbus The Golden Palm</h3>
+            <p>Elegant 2 &amp; 3 BHK luxury apartments in Sector 168, Noida — offering resort-style living with premium amenities and green vistas.</p>
+            <div class="listing-card-meta">
+              <span class="lc-tag">2–3 BHK</span>
+              <span class="lc-tag">Sector 168, Noida</span>
+              <span class="lc-tag">Luxury</span>
+            </div>
+            <a href="nimbus.html" class="listing-card-link">View Project <i class="fa fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Purvanchal -->
+        <div class="listing-card">
+          <div class="listing-card-img-wrap">
+            <img class="listing-card-img" src="../assets/projects/purvanchal/images/purvanchal-image-01.jpg" alt="Purvanchal Royal City" />
+            <span class="listing-card-badge">Township</span>
+          </div>
+          <div class="listing-card-body">
+            <div class="listing-card-dev">Purvanchal Group</div>
+            <h3>Purvanchal Royal City</h3>
+            <p>A self-sustained township in Great Noida West with 2, 3 &amp; 4 BHK residences, commercial spaces, schools, and recreational facilities.</p>
+            <div class="listing-card-meta">
+              <span class="lc-tag">2–4 BHK</span>
+              <span class="lc-tag">Greater Noida West</span>
+              <span class="lc-tag">Township</span>
+            </div>
+            <a href="purvanchal.html" class="listing-card-link">View Project <i class="fa fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Accord -->
+        <div class="listing-card">
+          <div class="listing-card-img-wrap">
+            <img class="listing-card-img" src="../assets/projects/accord/images/accord-image-03.jpg" alt="Accord The Icon" />
+            <span class="listing-card-badge">Commercial + Resi</span>
+          </div>
+          <div class="listing-card-body">
+            <div class="listing-card-dev">Accord Group</div>
+            <h3>Accord The Icon</h3>
+            <p>A mixed-use development in Greater Noida featuring premium 2 &amp; 3 BHK apartments alongside fully-loaded commercial office spaces.</p>
+            <div class="listing-card-meta">
+              <span class="lc-tag">2–3 BHK</span>
+              <span class="lc-tag">Greater Noida</span>
+              <span class="lc-tag">Mixed Use</span>
+            </div>
+            <a href="accord.html" class="listing-card-link">View Project <i class="fa fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Supertech -->
+        <div class="listing-card">
+          <div class="listing-card-img-wrap">
+            <img class="listing-card-img" src="../assets/projects/supertech/images/supertech-image-01.jpg" alt="Supertech Eco Village" />
+            <span class="listing-card-badge">Eco Township</span>
+          </div>
+          <div class="listing-card-body">
+            <div class="listing-card-dev">Supertech Ltd.</div>
+            <h3>Supertech Eco Village</h3>
+            <p>Eco-friendly township in Greater Noida West offering 1, 2 &amp; 3 BHK apartments with sustainable features and extensive green cover.</p>
+            <div class="listing-card-meta">
+              <span class="lc-tag">1–3 BHK</span>
+              <span class="lc-tag">Greater Noida West</span>
+              <span class="lc-tag">Eco-Friendly</span>
+            </div>
+            <a href="supertech.html" class="listing-card-link">View Project <i class="fa fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-main">
+        <div class="footer-logo">
+          <div class="logo logo-img-wrap">
+            <img src="../assets/Treasure Realties Logo.png" alt="Treasure Realties" class="footer-logo-img" />
+          </div>
+          <p class="footer-tagline">Building Trust, Creating Value</p>
+          <p>Your trusted real estate partner for premium properties along the Yamuna Expressway corridor.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../about.html">About Us</a></li>
+            <li><a href="../services.html">Services</a></li>
+            <li><a href="index.html">All Projects</a></li>
+            <li><a href="../contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Our Services</h4>
+          <ul>
+            <li><a href="../services.html#property-buying">Property Buying</a></li>
+            <li><a href="../services.html#rental-services">Rental Services</a></li>
+            <li><a href="../services.html#interior-design">Interior Design</a></li>
+            <li><a href="../contact.html">Consultation</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact Us</h4>
+          <div class="footer-contact-item"><i class="fa fa-location-dot"></i><span>Lord Krishna Mart, Yamuna Expressway, Greater Noida, UP</span></div>
+          <div class="footer-contact-item"><i class="fa fa-phone"></i><span><a href="tel:+919811515598" style="color:inherit;">+91 98115 15598</a></span></div>
+          <div class="footer-contact-item"><i class="fa fa-envelope"></i><span><a href="mailto:treasurerealties@gmail.com" style="color:inherit;">treasurerealties@gmail.com</a></span></div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Treasure Realties. All rights reserved.</span>
+        <span>Designed with care for Bhagat Singh &amp; Team</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal -->
+  <div id="contactModal" class="modal-overlay" style="display:none;" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-box">
+      <button class="modal-close" id="modalClose" aria-label="Close">&times;</button>
+      <p class="section-label">Quick Enquiry</p>
+      <div class="gold-line"></div>
+      <h3 id="modalTitle">Get in Touch</h3>
+      <p style="font-size:13px;color:var(--text-muted);margin-bottom:24px;">Fill in your details and our advisor will call you back shortly.</p>
+      <form id="modalContactForm" novalidate>
+        <div class="form-group"><label for="modalName">Full Name *</label><input type="text" id="modalName" name="name" placeholder="e.g. Rahul Sharma" required /></div>
+        <div class="form-group"><label for="modalPhone">Phone Number *</label><input type="tel" id="modalPhone" name="phone" placeholder="e.g. +91 98115 15598" required /></div>
+        <div class="form-group">
+          <label for="modalService">Service Interested In</label>
+          <select id="modalService" name="service" style="width:100%;padding:14px 16px;border:1px solid var(--border);background:var(--bg);font-family:'DM Sans',sans-serif;font-size:14px;color:var(--text);outline:none;transition:border-color 0.3s;appearance:none;cursor:pointer;">
+            <option value="">Select a service…</option>
+            <option value="buying">Property Buying</option>
+            <option value="rental">Rental Services</option>
+            <option value="interior">Interior Design</option>
+            <option value="advisory">Investment Advisory</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        <button type="submit" class="btn-gold form-btn" style="margin-top:8px;">Send Enquiry <i class="fa fa-arrow-right" style="margin-left:8px;"></i></button>
+      </form>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="../script.js"></script>
+</body>
+</html>

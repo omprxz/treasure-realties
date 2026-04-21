@@ -1161,3 +1161,29 @@ footer {
   .modal-box { padding: 32px 20px; }
 }
 
+/* ===== HOMEPAGE FEATURED PROJECTS ===== */
+.projects-home-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+.proj-home-card {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  border: 1px solid var(--border);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.proj-home-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 48px rgba(31,20,13,0.14);
+}
+.proj-home-card:hover .proj-home-img {
+  transform: scale(1.06);
+}
+@media (max-width: 1024px) {
+  .projects-home-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 640px) {
+  .projects-home-grid { grid-template-columns: 1fr; gap: 20px; }
+}
