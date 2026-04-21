@@ -57,31 +57,7 @@
           <p class="section-label">Yamuna Expressway's Finest</p>
           <h1>Discover Your Perfect Property</h1>
           <p>Premium homes, plots &amp; commercial spaces along the booming Yamuna Expressway corridor.</p>
-          <div class="slide-btns">
-            <a href="services.html" class="btn-gold">Explore Services</a>
-          </div>
-        </div>
-        <div class="hero-inline-form">
-          <p class="hero-form-title">Get a Free Consultation</p>
-          <form class="slide-enquiry-form" novalidate>
-            <div class="hero-form-group">
-              <input type="text" name="name" placeholder="Your Full Name *" required />
-            </div>
-            <div class="hero-form-group">
-              <input type="tel" name="phone" placeholder="Phone Number *" required />
-            </div>
-            <div class="hero-form-group">
-              <select name="service">
-                <option value="">Service Interested In…</option>
-                <option value="buying">Property Buying</option>
-                <option value="rental">Rental Services</option>
-                <option value="interior">Interior Design</option>
-                <option value="advisory">Investment Advisory</option>
-                <option value="other">Other</option>
-              </select>
-            </div>
-            <button type="submit" class="btn-gold hero-form-btn">Talk to an Expert <i class="fa fa-arrow-right" style="margin-left:8px;"></i></button>
-          </form>
+          <div class="slide-btns"><a href="services.html" class="btn-gold">Explore Services</a></div>
         </div>
       </div>
       <!-- Mobile layout -->
@@ -105,31 +81,7 @@
           <p class="section-label">Expert Real Estate Advisory</p>
           <h1>Invest Smart, Grow Wealth</h1>
           <p>Unlock high-potential investment opportunities in Greater Noida's fastest growing zone.</p>
-          <div class="slide-btns">
-            <a href="about.html" class="btn-gold">Our Story</a>
-          </div>
-        </div>
-        <div class="hero-inline-form">
-          <p class="hero-form-title">Get a Free Consultation</p>
-          <form class="slide-enquiry-form" novalidate>
-            <div class="hero-form-group">
-              <input type="text" name="name" placeholder="Your Full Name *" required />
-            </div>
-            <div class="hero-form-group">
-              <input type="tel" name="phone" placeholder="Phone Number *" required />
-            </div>
-            <div class="hero-form-group">
-              <select name="service">
-                <option value="">Service Interested In…</option>
-                <option value="buying">Property Buying</option>
-                <option value="rental">Rental Services</option>
-                <option value="interior">Interior Design</option>
-                <option value="advisory">Investment Advisory</option>
-                <option value="other">Other</option>
-              </select>
-            </div>
-            <button type="submit" class="btn-gold hero-form-btn">Get Free Consultation <i class="fa fa-arrow-right" style="margin-left:8px;"></i></button>
-          </form>
+          <div class="slide-btns"><a href="about.html" class="btn-gold">Our Story</a></div>
         </div>
       </div>
       <!-- Mobile layout -->
@@ -153,31 +105,7 @@
           <p class="section-label">Trusted &amp; Verified Listings</p>
           <h1>Your Dream Home Awaits</h1>
           <p>From luxury apartments to affordable flats — we help you find the right fit with zero hassle.</p>
-          <div class="slide-btns">
-            <a href="services.html" class="btn-gold">View Services</a>
-          </div>
-        </div>
-        <div class="hero-inline-form">
-          <p class="hero-form-title">Get a Free Consultation</p>
-          <form class="slide-enquiry-form" novalidate>
-            <div class="hero-form-group">
-              <input type="text" name="name" placeholder="Your Full Name *" required />
-            </div>
-            <div class="hero-form-group">
-              <input type="tel" name="phone" placeholder="Phone Number *" required />
-            </div>
-            <div class="hero-form-group">
-              <select name="service">
-                <option value="">Service Interested In…</option>
-                <option value="buying">Property Buying</option>
-                <option value="rental">Rental Services</option>
-                <option value="interior">Interior Design</option>
-                <option value="advisory">Investment Advisory</option>
-                <option value="other">Other</option>
-              </select>
-            </div>
-            <button type="submit" class="btn-gold hero-form-btn">Contact Us Today <i class="fa fa-arrow-right" style="margin-left:8px;"></i></button>
-          </form>
+          <div class="slide-btns"><a href="services.html" class="btn-gold">View Services</a></div>
         </div>
       </div>
       <!-- Mobile layout -->
@@ -192,15 +120,41 @@
       </div>
     </div>
 
-    <button class="slider-arrow prev" aria-label="Previous"><i class="fa fa-chevron-left"></i></button>
-    <button class="slider-arrow next" aria-label="Next"><i class="fa fa-chevron-right"></i></button>
-
     <div class="slider-dots">
-      <button class="slider-dot" aria-label="Slide 1"></button>
+      <button class="slider-dot active" aria-label="Slide 1"></button>
       <button class="slider-dot" aria-label="Slide 2"></button>
       <button class="slider-dot" aria-label="Slide 3"></button>
     </div>
+    <div class="slider-arrow prev" aria-label="Previous"><i class="fa fa-chevron-left"></i></div>
+    <div class="slider-arrow next" aria-label="Next"><i class="fa fa-chevron-right"></i></div>
 
+    <!-- ===== STATIC HERO FORM (PC Only) ===== -->
+    <div class="hero-static-form-container">
+      <div class="container" style="display:flex; justify-content: flex-end; align-items:center; height: 100%;">
+        <div class="hero-inline-form">
+          <p class="hero-form-title">Free Consultation</p>
+          <form class="slide-enquiry-form" novalidate>
+            <input type="hidden" name="form_label" value="Hero Static Form" />
+            <div class="hero-form-group">
+              <input type="text" name="name" placeholder="Full Name *" required />
+            </div>
+            <div class="hero-form-group">
+              <input type="tel" name="phone" placeholder="Phone Number *" required />
+            </div>
+            <div class="hero-form-group">
+              <select name="service">
+                <option value="">Interested in...</option>
+                <option value="buying">Property Buying</option>
+                <option value="rental">Rental Services</option>
+                <option value="interior">Interior Design</option>
+                <option value="advisory">Investment Advisory</option>
+              </select>
+            </div>
+            <button type="submit" class="btn-gold hero-form-btn">Send Request <i class="fa fa-arrow-right" style="margin-left:8px;"></i></button>
+          </form>
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- ===== ABOUT PREVIEW ===== -->

@@ -1027,6 +1027,23 @@ footer {
 }
 .hero-form-group input:focus,
 .hero-form-group select:focus { border-color: var(--gold); }
+/* Hero Static Form Container (over slider) */
+.hero-static-form-container {
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  pointer-events: none; /* Let clicks pass through to arrows/dots where needed */
+}
+.hero-static-form-container .container { height: 100%; }
+.hero-static-form-container .hero-inline-form {
+  pointer-events: all; /* Reactivate clicks for the form itself */
+  margin-top: 50px; /* Offset for header */
+}
+
+@media (max-width: 899px) {
+  .hero-static-form-container { display: none !important; }
+}
+
 .hero-form-btn {
   width: 100%;
   padding: 14px;
