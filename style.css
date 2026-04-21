@@ -294,9 +294,13 @@ ul { list-style: none; }
 .slide-bg {
   position: absolute;
   inset: 0;
-  background-size: cover;
-  background-position: center;
   opacity: 0.35;
+}
+.slide-bg picture, .slide-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 .slide-content {
   position: relative;
@@ -1205,6 +1209,6 @@ footer {
 @media (max-width: 1024px) {
   .projects-home-grid { grid-template-columns: repeat(2, 1fr); }
 }
-@media (max-width: 640px) {
+@media (max-width: 768px) {
   .projects-home-grid { grid-template-columns: 1fr; gap: 20px; }
 }

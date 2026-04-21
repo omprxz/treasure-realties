@@ -50,7 +50,12 @@
 
     <!-- SLIDE 1 -->
     <div class="slide active">
-      <div class="slide-bg" style="background-image:url('https://m.economictimes.com/thumb/msid-124088288,width-1200,height-900,resizemode-4,imgsize-182629/yamuna-expressway-golden-hour-prosperity.jpg')"></div>
+      <div class="slide-bg">
+        <picture>
+          <source media="(max-width: 768px)" srcset="https://m.economictimes.com/thumb/msid-124088288,width-800,height-1000,resizemode-4,imgsize-182629/yamuna-expressway.jpg">
+          <img src="https://m.economictimes.com/thumb/msid-124088288,width-1920,height-1080,resizemode-4,imgsize-182629/yamuna-expressway.jpg" alt="Yamuna Expressway Prosperity" loading="eager">
+        </picture>
+      </div>
       <!-- PC split layout -->
       <div class="slide-split-layout">
         <div class="slide-content slide-content-left">
@@ -74,7 +79,12 @@
 
     <!-- SLIDE 2 -->
     <div class="slide">
-      <div class="slide-bg" style="background-image:url('assets/gyc-towers.png')"></div>
+      <div class="slide-bg">
+        <picture>
+          <source media="(max-width: 768px)" srcset="assets/gyc-towers.png">
+          <img src="assets/gyc-towers.png" alt="Gaur Yamuna City Towers">
+        </picture>
+      </div>
       <!-- PC split layout -->
       <div class="slide-split-layout">
         <div class="slide-content slide-content-left">
@@ -98,7 +108,12 @@
 
     <!-- SLIDE 3 -->
     <div class="slide">
-      <div class="slide-bg" style="background-image:url('assets/living-room-interior.png')"></div>
+      <div class="slide-bg">
+        <picture>
+          <source media="(max-width: 768px)" srcset="assets/living-room-interior.png">
+          <img src="assets/living-room-interior.png" alt="Luxury Living Room Interior">
+        </picture>
+      </div>
       <!-- PC split layout -->
       <div class="slide-split-layout">
         <div class="slide-content slide-content-left">
@@ -312,7 +327,7 @@
         <p style="color:var(--text-muted);font-size:15px;margin-top:12px;max-width:560px;margin-left:auto;margin-right:auto;">Handpicked premium developments along the Yamuna Expressway and Greater Noida — vetted for quality, value, and legal compliance.</p>
       </div>
 
-      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:28px;" class="projects-home-grid">
+      <div class="projects-home-grid">
 
         <!-- GYC -->
         <a href="projects/gyc" style="text-decoration:none;" class="proj-home-card">
