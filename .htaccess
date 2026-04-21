@@ -1,0 +1,20 @@
+Options -MultiViews
+RewriteEngine On
+
+# 1. Externally redirect from file.html to file
+# This ensures that if someone visits /page.html, they are bounced to /page
+# We check THE_REQUEST to avoid infinite loops with internal rewrites
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s([^.]+)\.html [NC]
+RewriteRule ^ %1 [R=301,L]
+
+# 2. Internally rewrite from file to file.html
+# This allows the server to serve the .html file when /page is requested
+# Check if the requested name with .html exists as a file
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.*?)/?$ $1.html [L]
+
+# 3. Handle index files in subdirectories specifically if needed
+# (Optionally) ensure index.html is also cleaned
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s(.*)/index\.html [NC]
+RewriteRule ^ %1/ [R=301,L]

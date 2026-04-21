@@ -4,7 +4,7 @@
 $(document).ready(function () {
 
   /* ── Active nav link ── */
-  var currentPage = window.location.pathname.split('/').pop() || 'index.html';
+  var currentPage = window.location.pathname.split('/').pop() || '/';
   $('.nav-links a, .mobile-menu a').each(function () {
     var href = $(this).attr('href');
     if (href === currentPage) $(this).addClass('active');
