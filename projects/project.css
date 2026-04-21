@@ -925,3 +925,8 @@ ul { list-style: none; }
   .proj-hero-tags { display: none; }
   .proj-brochure { padding: 48px 0; }
 }
+
+/* ===== SWEETALERT2 OVERRIDES ===== */
+.swal2-container.swal2-topmost {
+  z-index: 10000 !important;
+}

@@ -130,16 +130,66 @@ $(document).ready(function () {
     });
   }
 
-  /* ── Contact page form submission ── */
+  /* ── SweetAlert2 Toast Configuration ── */
+  const Toast = Swal.mixin({
+    toast: true,
+    position: 'top-end',
+    showConfirmButton: false,
+    timer: 4000,
+    timerProgressBar: true,
+    customClass: {
+      container: 'swal2-topmost'
+    },
+    didOpen: (toast) => {
+      toast.addEventListener('mouseenter', Swal.stopTimer);
+      toast.addEventListener('mouseleave', Swal.resumeTimer);
+    }
+  });
+
+  /* ── Combined Form Handler function ── */
+  function handleFormSubmit($form, formLabel, successMsg) {
+    var $btn = $form.find('button[type="submit"]');
+    var origHTML = $btn.html();
+    
+    /* Change button state */
+    $btn.html('Sending\u2026 <i class="fa fa-spinner fa-spin" style="margin-left:8px;"></i>').prop('disabled', true);
+
+    /* Gather data */
+    var formData = new FormData($form[0]);
+    formData.append('form_label', formLabel);
+
+    /* AJAX request */
+    $.ajax({
+      url: '/api/sendmail.php',
+      method: 'POST',
+      data: formData,
+      processData: false,
+      contentType: false,
+      success: function(response) {
+        Toast.fire({
+          icon: 'success',
+          title: response.message || 'Sent successfully!'
+        });
+        $form[0].reset();
+        if ($form.attr('id') === 'modalContactForm') closeModal();
+      },
+      error: function(xhr) {
+        var err = xhr.responseJSON ? xhr.responseJSON.message : 'Oops! Something went wrong.';
+        Toast.fire({
+          icon: 'error',
+          title: err
+        });
+      },
+      complete: function() {
+        $btn.html(origHTML).prop('disabled', false);
+      }
+    });
+  }
+
+  /* ── Page-specific form bindings ── */
   $('#contactForm').on('submit', function (e) {
     e.preventDefault();
-    var btn = $(this).find('.form-btn');
-    var origHTML = btn.html();
-    btn.html('Sending… <i class="fa fa-spinner fa-spin" style="margin-left:8px;"></i>').prop('disabled', true);
-    setTimeout(function () {
-      btn.html('Message Sent! <i class="fa fa-check" style="margin-left:8px;"></i>');
-      setTimeout(function () { btn.html(origHTML).prop('disabled', false); }, 3000);
-    }, 1200);
+    handleFormSubmit($(this), 'Contact Page Form', 'Message Sent!');
   });
 
   /* ── Duplicate marquee items for seamless loop ── */
@@ -185,33 +235,13 @@ $(document).ready(function () {
   /* Modal form submit */
   $(document).on('submit', '#modalContactForm', function (e) {
     e.preventDefault();
-    var btn = $(this).find('button[type="submit"]');
-    var origHTML = btn.html();
-    btn.html('Sending… <i class="fa fa-spinner fa-spin" style="margin-left:8px;"></i>').prop('disabled', true);
-    setTimeout(function () {
-      btn.html('Enquiry Sent! <i class="fa fa-check" style="margin-left:8px;"></i>');
-      setTimeout(function () {
-        btn.html(origHTML).prop('disabled', false);
-        closeModal();
-        $('#modalContactForm')[0].reset();
-      }, 2500);
-    }, 1200);
+    handleFormSubmit($(this), 'Modal Quick Enquiry', 'Enquiry Sent!');
   });
 
-  /* ── Hero Slide Enquiry Forms (all 3 slides share same handler) ── */
+  /* ── Hero Slide Enquiry Forms ── */
   $(document).on('submit', '.slide-enquiry-form', function (e) {
     e.preventDefault();
-    var $form = $(this);
-    var btn = $form.find('.hero-form-btn');
-    var origHTML = btn.html();
-    btn.html('Sending… <i class="fa fa-spinner fa-spin" style="margin-left:8px;"></i>').prop('disabled', true);
-    setTimeout(function () {
-      btn.html('Thank You! We\'ll Call You Back <i class="fa fa-check" style="margin-left:8px;"></i>');
-      setTimeout(function () {
-        btn.html(origHTML).prop('disabled', false);
-        $form[0].reset();
-      }, 3000);
-    }, 1200);
+    handleFormSubmit($(this), 'Hero Slide Form', 'Thank You!');
   });
 
   /* ── Smooth scroll to hash section (footer service deep links) ── */

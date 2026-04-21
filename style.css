@@ -138,6 +138,10 @@ ul { list-style: none; }
   font-weight: 500;
   margin-top: 2px;
 }
+/* ===== SWEETALERT2 OVERRIDES ===== */
+.swal2-container.swal2-topmost {
+  z-index: 10000 !important;
+}
 
 .nav-links {
   display: flex;

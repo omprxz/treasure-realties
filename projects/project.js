@@ -237,37 +237,73 @@ $(document).ready(function () {
     }
   });
 
-  /* ── Brochure Modal ── */
+  /* ── Brochure Modal & Submit ── */
   $(document).on('click', '.open-brochure-btn', function (e) {
     e.preventDefault();
     $('.brochure-modal-overlay').addClass('open');
     $('body').css('overflow', 'hidden');
   });
-  $(document).on('click', '.brochure-modal-close', function () {
+
+  $(document).on('click', '.brochure-modal-close, .brochure-modal-overlay', function (e) {
+    if ($(this).hasClass('brochure-modal-overlay') && !$(e.target).is('.brochure-modal-overlay')) return;
     $('.brochure-modal-overlay').removeClass('open');
     $('body').css('overflow', '');
   });
-  $(document).on('click', '.brochure-modal-overlay', function (e) {
-    if ($(e.target).is('.brochure-modal-overlay')) {
-      $('.brochure-modal-overlay').removeClass('open');
-      $('body').css('overflow', '');
+
+  /* ── SweetAlert2 Toast Configuration ── */
+  const Toast = Swal.mixin({
+    toast: true,
+    position: 'top-end',
+    showConfirmButton: false,
+    timer: 4000,
+    timerProgressBar: true,
+    customClass: {
+      container: 'swal2-topmost'
+    },
+    didOpen: (toast) => {
+      toast.addEventListener('mouseenter', Swal.stopTimer);
+      toast.addEventListener('mouseleave', Swal.resumeTimer);
     }
   });
 
   $(document).on('submit', '#brochureForm', function (e) {
     e.preventDefault();
-    var $btn = $(this).find('.bm-submit');
-    var orig = $btn.html();
+    var $form = $(this);
+    var $btn = $form.find('.bm-submit');
+    var origHTML = $btn.html();
+    var projectTitle = $('title').text().split('—')[0].trim();
+
     $btn.html('<i class="fa fa-spinner fa-spin"></i> Sending\u2026').prop('disabled', true);
-    setTimeout(function () {
-      $btn.html('<i class="fa fa-check"></i> Brochure Sent!').css('background', '#2e7d32');
-      setTimeout(function () {
-        $btn.html(orig).prop('disabled', false).css('background', '');
+
+    var formData = new FormData($form[0]);
+    formData.append('form_label', 'Brochure Request: ' + projectTitle);
+    formData.append('project', projectTitle);
+
+    $.ajax({
+      url: '/api/sendmail.php',
+      method: 'POST',
+      data: formData,
+      processData: false,
+      contentType: false,
+      success: function(response) {
+        Toast.fire({
+          icon: 'success',
+          title: 'Brochure requested for ' + projectTitle
+        });
+        $form[0].reset();
         $('.brochure-modal-overlay').removeClass('open');
         $('body').css('overflow', '');
-        $('#brochureForm')[0].reset();
-      }, 2800);
-    }, 1200);
+      },
+      error: function() {
+        Toast.fire({
+          icon: 'error',
+          title: 'Error processing request'
+        });
+      },
+      complete: function() {
+        $btn.html(origHTML).prop('disabled', false);
+      }
+    });
   });
 
 });
