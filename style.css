@@ -260,7 +260,7 @@ ul { list-style: none; }
   content: '';
   position: absolute;
   inset: 0;
-  background: url('https://placehold.co/1200x600') center/cover no-repeat;
+  background: url('https://m.economictimes.com/thumb/msid-124088288,width-1200,height-900,resizemode-4,imgsize-182629/yamuna-expressway-golden-hour-prosperity.jpg') center/cover no-repeat;
   opacity: 0.12;
 }
 .page-hero .container { position: relative; z-index: 1; }
@@ -623,11 +623,10 @@ ul { list-style: none; }
   gap: 8px;
 }
 .marquee-item img {
-  height: 44px;
+  height: 60px;
   width: auto;
-  opacity: 0.55;
   transition: opacity 0.3s;
-  filter: grayscale(1);
+  border-radius: 50%;
 }
 .marquee-dev-name {
   font-family: 'DM Sans', sans-serif;
@@ -866,7 +865,7 @@ footer {
   align-items: start;
 }
 .bs-image-wrap { position: relative; }
-.bs-image-wrap img { width: 100%; height: 420px; object-fit: cover; }
+.bs-image-wrap img { width: 100%; height: 420px; object-fit: cover; object-position: top; }
 .bs-name-tag {
   position: absolute;
   bottom: 0; left: 0; right: 0;
