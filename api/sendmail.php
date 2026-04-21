@@ -2,7 +2,7 @@
 header('Content-Type: application/json');
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $to = "omprxz@gmail.com";
+    $to = "treasurerealties@gmail.com";
     $label = $_POST['form_label'] ?? 'General Enquiry';
     $subject = "New Lead: " . $label . " | Treasure Realties";
     
